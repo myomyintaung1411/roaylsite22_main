@@ -317,7 +317,7 @@ const MouseOut = () => {
         <div class=" pb-2">
           <vue-qr
             class="h-full w-[150px] "
-            :text="Global.chat_app"
+            v-bind:text="Global.chat_app"
             :logoSrc="logo"
             :margin="13"
             
@@ -333,7 +333,7 @@ const MouseOut = () => {
         <div class=" pb-2">
           <vue-qr
             class="h-full w-[150px] "
-            :text="Global.h5_game_url"
+            v-bind:text="Global.h5_game_url"
             :logoSrc="logo"
              :margin="13"
             
@@ -347,7 +347,7 @@ const MouseOut = () => {
         <div class=" pb-2">
           <vue-qr
             class="h-full w-[150px] "
-            :text="Global.app_down"
+            v-bind:text="Global.app_down"
             :logoSrc="logo"
             :margin="13"
            
