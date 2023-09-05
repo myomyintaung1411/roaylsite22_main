@@ -7,12 +7,10 @@ const global = {
     ad:"http://hj666999.cn/",
     app_down:"http://appxz.hjwt1.com/",
     chat_app:"http://www.cx6699.com",
-    service1:"http://chat.royalgaming.today/#/?visiter_id=&avatar=&business_id=1&groupid=1&special=80",
-    service2:"http://chat.royalgaming.today/#/?visiter_id=&avatar=&business_id=1&groupid=1&special=81"
+    service1:"http://hjkf88.cn/#/?visiter_id=&avatar=&business_id=1&groupid=1&special=80",
+    service2:"http://hjkf88.cn/#/?visiter_id=&avatar=&business_id=1&groupid=1&special=81"
 };
-
 //web two
-
 // const global = {
 //     old_pc_game_url:'http://hj111.vip/',
 //     new_pc_game_url:'http://hj222.vip/',
@@ -20,6 +18,6 @@ const global = {
 //     ad:"http://hj7777.vip/",
 //     app_down:"http://hjdownload.vip/",
 //     chat_app:"http://www.cx6699.com",
-//     service1:"http://chat.royalgaming.today/#/?visiter_id=&avatar=&business_id=1&groupid=1&special=80",
-//     service2:"http://chat.royalgaming.today/#/?visiter_id=&avatar=&business_id=1&groupid=1&special=81"
-// };
+//     service1:"http://hjkf88.cn/#/?visiter_id=&avatar=&business_id=1&groupid=1&special=80",
+//     service2:"http://hjkf88.cn/#/?visiter_id=&avatar=&business_id=1&groupid=1&special=81"
+// }

@@ -316,7 +316,7 @@ const MouseOut = () => {
         /> -->
         <div class=" pb-2">
           <vue-qr
-            class="h-full w-[150px] "
+            class="h-full w-[160px] "
             v-bind:text="Global.chat_app"
             :logoSrc="logo"
             :margin="13"
@@ -326,13 +326,13 @@ const MouseOut = () => {
           />
         </div>
 
-        <button style="color: #0fc" class="qrBtn">诚信聊天软件</button>
+        <button style="color: #0fc" class="qrBtn ml-1">诚信聊天软件</button>
       </div>
       
       <div class="mt-8">
         <div class=" pb-2">
           <vue-qr
-            class="h-full w-[150px] "
+            class="h-full w-[160px] "
             v-bind:text="Global.h5_game_url"
             :logoSrc="logo"
              :margin="13"
@@ -341,12 +341,12 @@ const MouseOut = () => {
           
           />
         </div>
-        <button style="color: #0fc" class="qrBtn">H5扫码</button>
+        <button style="color: #0fc" class="qrBtn ml-1">H5扫码</button>
       </div>
       <div class="mt-8">
         <div class=" pb-2">
           <vue-qr
-            class="h-full w-[150px] "
+            class="h-full w-[160px] "
             v-bind:text="Global.app_down"
             :logoSrc="logo"
             :margin="13"
@@ -354,7 +354,7 @@ const MouseOut = () => {
            
           />
         </div>
-        <button style="color: #0fc" class="qrBtn">APP下载</button>
+        <button style="color: #0fc" class="qrBtn ml-1">APP下载</button>
       </div>
       <div class="mt-8">
         <button type="button" class="qrBtn" @click="showIosModal = true">
