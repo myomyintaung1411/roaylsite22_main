@@ -33,16 +33,16 @@ const emit = defineEmits(["close"]);
 
 const showModal = ref(false);
 const modal = ref(null);
-// const { onClickOutside } = useClickOutside();
+ const { onClickOutside } = useClickOutside();
 
 const closeModal = () => {
   emit("close");
 };
-// onClickOutside(modal, () => {
-//   if (showModal.value === true) {
-//     closeModal();
-//   }
-// });
+onClickOutside(modal, () => {
+  if (showModal.value === true) {
+    closeModal();
+  }
+});
 watch(
   () => props.show,
   (show) => {

@@ -9,6 +9,9 @@ import About from "./About.vue";
 import { ref, onMounted } from "vue";
 import {  XIcon } from "@heroicons/vue/outline";
 
+
+const adDialog = ref(false)
+
 const imageSource = ref(1);
 const showIosModal = ref(false);
 const playerRule = ref(false);
@@ -37,6 +40,7 @@ const Global = global; // call unknow.js object as global
 onMounted(() => {
   // window.addEventListener("scroll", handleScroll);
   //callData();
+  //adDialog.value = true
 });
 
 const goGame = () => {
@@ -71,11 +75,11 @@ width=500,height=700,left=${window.screen.width / 2},top=${window.screen.width /
        isshowKefu.value = false
        h5_isshowKefu.value = false
       break;
-    case 1:
-       window.open(Global.service2,"mywindow",params)
-       isshowKefu.value = false
-        h5_isshowKefu.value = false
-      break;
+    // case 1:
+    //    window.open(Global.service2,"mywindow",params)
+    //    isshowKefu.value = false
+    //     h5_isshowKefu.value = false
+    //   break;
   
     default:
       break;
@@ -201,7 +205,14 @@ const MouseOut = () => {
     <ButtonRepo  destination="https://www.example.com" />
   </div> -->
 
-  <div class="home relative hidden sm:block">
+  <div class="home relative hidden sm:block ">
+    <div class="absolute bottom-2 w-full text-white z-10 text-3xl flex items-center justify-center ">
+        <div class="w-[500px] text-[#ff0000] bg-white  py-2 rounded-md px-1">
+          <Vue3Marquee class=" w-full  tracking-[3px]">
+         有会员账号的玩家，请尽量登陆之后再联系客服。
+        </Vue3Marquee>
+        </div>
+    </div>
     <div class="absolute top-20 left-10 flex justify-center items-center">
       <img
         src="@/assets/images/pz.png"
@@ -375,11 +386,11 @@ const MouseOut = () => {
             <h2 class="text-center text-base tracking-wide text-[#FFC827]">选择客服</h2>
             <div   class="py-1 space-y-2 ">
               <div @click="clickService(0)" class="rounded-lg flex items-center text-sm text-center justify-center bg-[#350b2d] py-2">
-                皇家客服一
+                皇家客服
               </div>
-              <div @click="clickService(1)" class="rounded-lg flex items-center text-sm text-center justify-center bg-[#350b2d] py-2">
-                皇家客服二
-              </div>
+              <!-- <div @click="clickService(1)" class="rounded-lg flex items-center text-sm text-center justify-center bg-[#350b2d] py-2">
+                皇家客服
+              </div> -->
             </div>
           </div>
         </div>
@@ -489,21 +500,6 @@ const MouseOut = () => {
             <div
               class="flex flex-col items-center px-4 font-bold text-white text-2xl"
             >
-              <div>豪 华 版</div>
-              <div
-                @click="goDialog_Game(0)"
-                class="w-full border-[2px] border-solid hover:border-[3px] cursor-pointer hover:border-solid hover:border-[#ecda92] rounded border-[#836a4c] h-64 mt-5"
-              >
-                <img
-                  src="@/assets/images/gameimg1.jpg"
-                  alt=""
-                  class="w-full h-full object-cover p-[1px]"
-                />
-              </div>
-            </div>
-            <div
-              class="flex flex-col items-center px-4 font-bold text-white text-2xl"
-            >
               <div>经 典 版</div>
               <div
                 @click="goDialog_Game(1)"
@@ -516,6 +512,22 @@ const MouseOut = () => {
                 />
               </div>
             </div>
+            <div
+              class="flex flex-col items-center px-4 font-bold text-white text-2xl"
+            >
+              <div>豪 华 版</div>
+              <div
+                @click="goDialog_Game(0)"
+                class="w-full border-[2px] border-solid hover:border-[3px] cursor-pointer hover:border-solid hover:border-[#ecda92] rounded border-[#836a4c] h-64 mt-5"
+              >
+                <img
+                  src="@/assets/images/gameimg1.jpg"
+                  alt=""
+                  class="w-full h-full object-cover p-[1px]"
+                />
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
@@ -534,12 +546,32 @@ const MouseOut = () => {
         </div>
       </div>
     </GameModalDialog>
+<!-- 
+    <GameModalDialog :show="adDialog" @closegame="adDialog=false">
+      <div  
+        class="    p-5 bg-transparent cursor-pointer my-0 mx-auto relative"
+      >
+        <div class="sm:w-[70vw] sm:h-[75vh] w-[80vw] h-64 ">
+            <div class="w-full items-center h-full flex justify-center ">
+
+          <img src="@/assets/images/hd.png" alt="" class=" w-full h-full object-cover sm:object-fill " draggable="false">
+            </div>
+          
+        </div>
+      </div>
+    </GameModalDialog> -->
 
   </div>
 
   <div class="sm:hidden h-screen bg-black w-full relative">
     <img src="@/assets/images/index_01.jpg" class="w-full h-auto" alt="" />
     <div class="flex justify-center items-center flex-col pt-3">
+       <div class=" w-full px-4 text-[#ff0000]   py-2 ">
+          <Vue3Marquee class=" w-full  tracking-[3px]">
+         有会员账号的玩家，请尽量登陆之后再联系客服。
+        </Vue3Marquee>
+      </div>
+
       <div class="BtnUnit">
         <div class="T1" @click="goDialog_Game(2)">
           <a class="text-white">H5 登录入口</a>
@@ -566,6 +598,7 @@ const MouseOut = () => {
           <a href="http://cx5577.com">推广复制当前链接分享</a>
         </div>
       </div> -->
+
     </div>
     <div class="fixed bottom-0 w-full h-36 __bgfooter"></div>
     <div class="fixed bottom-2 text-center w-full">
@@ -627,14 +660,14 @@ const MouseOut = () => {
             @click="clickService(0)"
             class="w-full border-[1px] h-10 mt-3 text-center text-base leading-10 border-solid hover:border-[1px] cursor-pointer hover:border-solid hover:border-[#ecda92] rounded border-[#836a4c] "
           >
-            皇家客服一
+            皇家客服
           </div>
-          <div
+          <!-- <div
             @click="clickService(1)"
             class="w-full border-[1px] h-10 mt-3 text-center text-base leading-10 border-solid hover:border-[1px] cursor-pointer hover:border-solid hover:border-[#ecda92] rounded border-[#836a4c] "
           >
-            皇家客服二
-          </div>
+            皇家客服
+          </div> -->
         </div>
       </div>
     </div>
