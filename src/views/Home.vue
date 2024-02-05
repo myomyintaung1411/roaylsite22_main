@@ -213,6 +213,10 @@ const MouseOut = () => {
         </Vue3Marquee>
         </div>
     </div>
+    <!-- <section class="absolute top-20 lef-20">
+      sdfdsf
+    </section> -->
+
     <div class="absolute top-20 left-10 flex justify-center items-center">
       <img
         src="@/assets/images/pz.png"
@@ -237,7 +241,15 @@ const MouseOut = () => {
       />
     </div>
 
-    <div class="m-auto md:w-[700px] xl:w-[800px] h-auto">
+    <div class="m-auto md:w-[700px] xl:w-[800px] h-auto relative">
+      <!-- hongbao -->
+      <div class="flex absolute -left-28 justify-center items-center w-[200px]  ">
+        <img src="@/assets/images/Left.png" alt="left" class="w-full object-cover animate-fade-left-right ">
+     </div>
+      <div class="flex absolute -right-28 justify-center items-center w-[200px]  ">
+        <img src="@/assets/images/right.png" alt="left" class="w-full object-cover animate-fade-left-right ">
+     </div>
+
       <div class="pt-16">
         <img
           class="Rotation img block m-auto h-auto w-[30%]"
@@ -318,6 +330,8 @@ const MouseOut = () => {
         </div>
       </div>
     </div>
+
+
     <div class="absolute z-20 top-20 md:right-3 xl:right-20">
       <div class="mt-8">
         <!-- <img
@@ -676,6 +690,20 @@ const MouseOut = () => {
 
 
 <style>
+
+/* @keyframes fadeLeftRight {
+    0%, 100% {
+        opacity: 0.6;
+        transform: translateX(-25%);
+    }
+    50% {
+        opacity: 1;
+        transform: none;
+    }
+}
+.animate-fade-left-right {
+    animation: fadeLeftRight 3s ease-in-out infinite;
+} */
 .__bgfooter {
   background-image: url("@/assets/images/pc_bg.png");
   background-size: cover;
