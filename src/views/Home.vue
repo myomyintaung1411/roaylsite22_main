@@ -22,7 +22,7 @@ const centerImg = ref("/lk1.png");
 const img1 = ref("/dh3.png");
 const img2 = ref("/dj3.png");
 const img3 = ref("/ht3.png");
-const img4 = ref("/htj3.png");
+const img4 = ref("/xyx3.png");
 const activeTab = ref(0);
 
 const notice_Dialog = ref(false) //notice dialog for old pc
@@ -131,6 +131,9 @@ const h5_click = (number) => {
     case 3:
       h5_isshowKefu.value = true
       break;
+    case 4:
+     window.open(Global.small_game);
+      break;
 
     default:
       break;
@@ -148,6 +151,9 @@ const goGamePc = (number) => {
       break;
     case 2:
       window.open(Global.ad);
+      break;
+    case 3:
+      window.open(Global.small_game);
       break;
 
     default:
@@ -188,7 +194,7 @@ const MouseOver = () => {
   img1.value = "/dhb3.png";
   img2.value = "/djb3.png";
   img3.value = "/htb3.png";
-  img4.value = "/htbj3.png";
+  img4.value = "/xyxb3.png";
 };
 
 const MouseOut = () => {
@@ -196,7 +202,7 @@ const MouseOut = () => {
   img1.value = "/dh3.png";
   img2.value = "/dj3.png";
   img3.value = "/ht3.png";
-  img4.value = "/htj3.png";
+  img4.value = "/xyx3.png";
 };
 </script>
 
@@ -243,12 +249,12 @@ const MouseOut = () => {
 
     <div class="m-auto md:w-[700px] xl:w-[800px] h-auto relative">
       <!-- hongbao -->
-      <div class="flex absolute -left-28 justify-center items-center w-[200px]  ">
+      <!-- <div class="flex absolute -left-28 justify-center items-center w-[200px]  ">
         <img src="@/assets/images/Left.png" alt="left" class="w-full object-cover animate-fade-left-right ">
      </div>
       <div class="flex absolute -right-28 justify-center items-center w-[200px]  ">
         <img src="@/assets/images/right.png" alt="left" class="w-full object-cover animate-fade-left-right ">
-     </div>
+     </div> -->
 
       <div class="pt-16">
         <img
@@ -318,6 +324,14 @@ const MouseOut = () => {
             @mouseover="imageSource = 3"
           >
             后台登录
+          </div>
+          <div
+            @click="goGamePc(3)"
+            :class="pcActiveTab == 3 ? ' active_class ' : ''"
+            class="rounded-3xl w-36 h-12 text-center font-bold tracking-wider __btn cursor-pointer flex justify-center items-center text-black"
+            @mouseover="imageSource = 4"
+          >
+          小游戏
           </div>
           <!-- <div class="rounded-3xl w-44 h-12 text-center font-bold tracking-wider __btn
         cursor-pointer  flex justify-center items-center text-black" style="font-size:16px"
@@ -603,6 +617,9 @@ const MouseOut = () => {
       </div>
       <div @click="h5_click(2)" class="BtnUnit">
         <div class="T1"><a>诚信聊天下载</a></div>
+      </div>
+      <div @click="h5_click(4)" class="BtnUnit">
+        <div class="T1"><a>小游戏</a></div>
       </div>
       <div @click="h5_click(3)" class="BtnUnit">
         <div class="T1"><a>客服</a></div>

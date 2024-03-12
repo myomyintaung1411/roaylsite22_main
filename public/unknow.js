@@ -7,6 +7,7 @@ const global = {
     ad:"https://ht.th371.com/",
     app_down:"https://download.yx753.com/",
     chat_app:"http://www.cx6699.top/",
+    small_game:'http://sg.royalgaming.today',
     service1:"https://hjkf88.cn/#/?visiter_id=&avatar=&business_id=1&groupid=1&special=80",
     //service2:"https://hjkf88.cn/#/?visiter_id=&avatar=&business_id=1&groupid=1&special=81"
 };
