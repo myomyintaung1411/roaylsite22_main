@@ -331,7 +331,7 @@ const MouseOut = () => {
             class="rounded-3xl w-36 h-12 text-center font-bold tracking-wider __btn cursor-pointer flex justify-center items-center text-black"
             @mouseover="imageSource = 4"
           >
-          小游戏
+          休闲小游戏
           </div>
           <!-- <div class="rounded-3xl w-44 h-12 text-center font-bold tracking-wider __btn
         cursor-pointer  flex justify-center items-center text-black" style="font-size:16px"
@@ -619,7 +619,7 @@ const MouseOut = () => {
         <div class="T1"><a>诚信聊天下载</a></div>
       </div>
       <div @click="h5_click(4)" class="BtnUnit">
-        <div class="T1"><a>小游戏</a></div>
+        <div class="T1"><a>休闲小游戏</a></div>
       </div>
       <div @click="h5_click(3)" class="BtnUnit">
         <div class="T1"><a>客服</a></div>
