@@ -26,7 +26,7 @@ const img4 = ref("/xyx3.png");
 const activeTab = ref(0);
 
 const notice_Dialog = ref(false) //notice dialog for old pc
-
+const phone_Dialog = ref(false)
 const selectGameModal = ref(false);
 const h5_selectGameDialog = ref(false);
 const pcActiveTab = ref(1); //middle one active
@@ -133,6 +133,9 @@ const h5_click = (number) => {
       break;
     case 4:
      window.open(Global.small_game);
+      break;
+    case 5:
+     phone_Dialog.value = true
       break;
 
     default:
@@ -346,7 +349,7 @@ const MouseOut = () => {
     </div>
 
 
-    <div class="absolute z-20 top-20 md:right-3 xl:right-20">
+    <div class="absolute z-20 top-5 md:right-3 xl:right-20">
       <div class="mt-8">
         <!-- <img
           src="http://hj65555.cc/img/ltm.png"
@@ -368,7 +371,7 @@ const MouseOut = () => {
         <button style="color: #0fc" class="qrBtn ml-1">诚信聊天软件</button>
       </div>
       
-      <div class="mt-8">
+      <div class="mt-4">
         <div class=" pb-2">
           <vue-qr
             class="h-full w-[160px] "
@@ -382,7 +385,7 @@ const MouseOut = () => {
         </div>
         <button style="color: #0fc" class="qrBtn ml-1">H5扫码</button>
       </div>
-      <div class="mt-8">
+      <div class="mt-4">
         <div class=" pb-2">
           <vue-qr
             class="h-full w-[160px] "
@@ -395,15 +398,16 @@ const MouseOut = () => {
         </div>
         <button style="color: #0fc" class="qrBtn ml-1">APP下载</button>
       </div>
-      <div class="mt-8">
+      <div class="mt-4">
         <button type="button" class="qrBtn" @click="showIosModal = true">
           IOS安装教程
         </button>
       </div>
-      <div @click="isshowKefu = true" class="mt-8 absolute right-0 cursor-pointer">
+      <div @click="isshowKefu = true" class="mt-3 absolute  right-0 cursor-pointer">
           <img src="@/assets/images/ic_kf.svg" alt="" class="w-10">
 
       </div>
+
       <div v-if="isshowKefu"
           class="absolute cursor-pointer  h-auto flex items-center text-white  text-center overflow-y-auto  leading-[30px] text-sm left-[-150px] bg-[#3a3a3a] ">
           <div class="w-[200px] py-2  px-2 max-h-80 h-full relative ">
@@ -422,6 +426,21 @@ const MouseOut = () => {
             </div>
           </div>
         </div>
+
+        <div class="mt-[70px]  ">
+        <div class="font-bold text-white text-base qrBtn  text-center py-1" style="color: #0fc" >
+          官网电话
+        </div>
+        <div class="text-white mt-1 bg-[#3a3a3a] w-[150px]">
+          <a href="tel:+95988311156" class="hover:bg-black py-1 px-2 hover:text-[#0fc]">+95 98 8311 1156</a>
+        </div>
+        <div class="text-white  bg-[#3a3a3a] w-[150px]">
+          <a href="tel:+95988311157" class="hover:bg-black py-1 px-2 hover:text-[#0fc]">+95 98 8311 1157</a>
+        </div>
+        <div class="text-white  bg-[#3a3a3a] w-[150px] ">
+          <a href="tel:+95988311158" class="hover:text-[#0fc] hover:bg-black py-1 px-2">+95 98 8311 1158</a>
+        </div>
+      </div>
     </div>
     <ModalDialog :show="showIosModal" @close="showIosModal = false">
       <div class="w-full p-10 bg-black  bg-opacity-25 overflow-y-auto h-[90vh]">
@@ -624,6 +643,9 @@ const MouseOut = () => {
       <div @click="h5_click(3)" class="BtnUnit">
         <div class="T1"><a>客服</a></div>
       </div>
+      <div @click="h5_click(5)" class="BtnUnit">
+        <div class="T1"><a>官网电话</a></div>
+      </div>
       <!-- <div class="BtnUnit">
         <div class="T1">
           <a href="http://cx5577.com">推广复制当前链接分享</a>
@@ -699,6 +721,40 @@ const MouseOut = () => {
           >
             皇家客服
           </div> -->
+        </div>
+      </div>
+    </div>
+  </GameModalDialog>
+  <GameModalDialog
+    :show="phone_Dialog"
+    @closegame="phone_Dialog = false"
+  >
+    <div class="h-auto w-[90vw] cursor-pointer py-2">
+      <div class="mt-12 bg-black">
+        <div
+          class="flex flex-col items-center px-4 font-bold text-white text-2xl bg-[#2b2a2954] py-3"
+        >
+          <div>官网电话</div>
+          <div
+           
+            class="w-full border-[1px] h-10 mt-3 text-center text-base leading-10 border-solid hover:border-[1px] cursor-pointer hover:border-solid hover:border-[#ecda92] rounded border-[#836a4c] "
+          >
+            <a href="tel:+95988311156" class="hover:bg-black  px-2 hover:text-[#0fc]  block">+95 98 8311 1156</a>
+          </div>
+          <div
+           
+            class="w-full border-[1px] h-10 mt-3 text-center text-base leading-10 border-solid hover:border-[1px] cursor-pointer hover:border-solid hover:border-[#ecda92] rounded border-[#836a4c] "
+          >
+          <a href="tel:+95988311157" class="hover:bg-black  px-2 hover:text-[#0fc] block">+95 98 8311 1157</a>
+
+          </div>
+          <div
+          
+            class="w-full border-[1px] h-10 mt-3 text-center text-base leading-10 border-solid hover:border-[1px] cursor-pointer hover:border-solid hover:border-[#ecda92] rounded border-[#836a4c] "
+          >
+          <a href="tel:+95988311158" class="hover:text-[#0fc] hover:bg-black block px-2">+95 98 8311 1158</a>
+
+          </div>
         </div>
       </div>
     </div>
