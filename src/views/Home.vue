@@ -137,6 +137,9 @@ const h5_click = (number) => {
     case 5:
      phone_Dialog.value = true
       break;
+    case 6:
+    window.open(Global.reg);
+      break;
 
     default:
       break;
@@ -349,7 +352,7 @@ const MouseOut = () => {
     </div>
 
 
-    <div class="absolute z-20 top-5 md:right-3 xl:right-20">
+    <div class="absolute z-20 top-0 md:right-3 xl:right-20">
       <div class="mt-8">
         <!-- <img
           src="http://hj65555.cc/img/ltm.png"
@@ -371,7 +374,7 @@ const MouseOut = () => {
         <button style="color: #0fc" class="qrBtn ml-1">诚信聊天软件</button>
       </div>
       
-      <div class="mt-4">
+      <div class="pt-3">
         <div class=" pb-2">
           <vue-qr
             class="h-full w-[160px] "
@@ -385,7 +388,7 @@ const MouseOut = () => {
         </div>
         <button style="color: #0fc" class="qrBtn ml-1">H5扫码</button>
       </div>
-      <div class="mt-4">
+      <div class="pt-3">
         <div class=" pb-2">
           <vue-qr
             class="h-full w-[160px] "
@@ -398,7 +401,7 @@ const MouseOut = () => {
         </div>
         <button style="color: #0fc" class="qrBtn ml-1">APP下载</button>
       </div>
-      <div class="mt-4">
+      <div class="pt-3">
         <button type="button" class="qrBtn" @click="showIosModal = true">
           IOS安装教程
         </button>
@@ -427,7 +430,7 @@ const MouseOut = () => {
           </div>
         </div>
 
-        <div class="mt-[70px]  ">
+        <div class="pt-[70px]  ">
         <div class="font-bold text-white text-base qrBtn  text-center py-1" style="color: #0fc" >
           官网电话
         </div>
@@ -440,6 +443,19 @@ const MouseOut = () => {
         <div class="text-white  bg-[#3a3a3a] w-[150px] ">
           <a href="tel:+95988311158" class="hover:text-[#0fc] hover:bg-black py-1 px-2">+95 98 8311 1158</a>
         </div>
+      </div>
+      <div class="pt-3 pb-3">
+        <div class=" pb-2">
+          <vue-qr
+            class="h-full w-[160px] "
+            v-bind:text="Global.reg"
+            :logoSrc="logo"
+            :margin="13"
+           
+           
+          />
+        </div>
+        <a :href="Global.reg" target="_blank" style="color: #0fc" class="block text-center qrBtn ml-1">注册会员</a>
       </div>
     </div>
     <ModalDialog :show="showIosModal" @close="showIosModal = false">
@@ -610,15 +626,20 @@ const MouseOut = () => {
 
   </div>
 
-  <div class="sm:hidden h-screen bg-black w-full relative">
+  <div class="sm:hidden h-screen bg-black w-full relative overflow-y-auto">
     <img src="@/assets/images/index_01.jpg" class="w-full h-auto" alt="" />
-    <div class="flex justify-center items-center flex-col pt-3">
+    <div class="flex justify-center items-center flex-col pt-3 pb-20 ">
        <div class=" w-full px-4 text-[#ff0000]   py-2 ">
           <Vue3Marquee class=" w-full  tracking-[3px]">
          有会员账号的玩家，请尽量登陆之后再联系客服。
         </Vue3Marquee>
       </div>
 
+      <div class="BtnUnit">
+        <div class="T1" @click="h5_click(6)">
+          <a class="text-white">注册会员</a>
+        </div>
+      </div>
       <div class="BtnUnit">
         <div class="T1" @click="goDialog_Game(2)">
           <a class="text-white">H5 登录入口</a>
@@ -634,9 +655,9 @@ const MouseOut = () => {
           <a>代理登录入口</a>
         </div>
       </div>
-      <div @click="h5_click(2)" class="BtnUnit">
+      <!-- <div @click="h5_click(2)" class="BtnUnit">
         <div class="T1"><a>诚信聊天下载</a></div>
-      </div>
+      </div> -->
       <div @click="h5_click(4)" class="BtnUnit">
         <div class="T1"><a>休闲小游戏</a></div>
       </div>
@@ -791,6 +812,7 @@ const MouseOut = () => {
     bottom: 0; */
   width: 100%;
   height: 100%;
+  overflow-y: auto;
 }
 .__btn {
   background: rgba(255, 255, 255, 0.8);

@@ -1,6 +1,7 @@
 
 // //web one
 const global = {
+    reg:'https://hjtg.th371.com/?InvCode=GO40906',
     old_pc_game_url:'https://pc1.th371.com/',
     new_pc_game_url:'https://pc2.th371.com/',
     h5_game_url:'https://h5.th371.com/',
