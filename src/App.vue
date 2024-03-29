@@ -57,6 +57,13 @@
 </template>
 
 <style>
+body {
+    touch-action: manipulation;
+    /* Prevent double tap zoom on iOS */
+    -webkit-touch-callout: none; /* Disable long press */
+    -ms-touch-action: manipulation;
+    /* Prevent double tap zoom on Windows devices */
+}
 .main{
   padding: 0;
   margin: 0;
