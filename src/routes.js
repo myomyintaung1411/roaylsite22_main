@@ -21,7 +21,7 @@ export const routes = [
   //   meta: { title: 'About' },
   //   component: About,
   // },
-  { path: '/:path(.*)', component: NotFound },
+  { path: '/:path(.*)', component: Home },
 ]
 
 const router = createRouter({
