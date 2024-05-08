@@ -635,11 +635,11 @@ const MouseOut = () => {
         </Vue3Marquee>
       </div>
 
-      <div class="BtnUnit">
+      <!-- <div class="BtnUnit">
         <div class="T1" @click="h5_click(6)">
           <a class="text-white">注册会员</a>
         </div>
-      </div>
+      </div> -->
       <div class="BtnUnit">
         <div class="T1" @click="goDialog_Game(2)">
           <a class="text-white">H5 登录入口</a>
