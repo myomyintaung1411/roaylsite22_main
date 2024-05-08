@@ -83,7 +83,7 @@ section {
 	animation: changeColor 5s linear infinite;
 }
 
-@keyframes changeColor {
+/* @keyframes changeColor {
 	0%
 	{
 		filter: hue-rotate(0deg);
@@ -92,7 +92,7 @@ section {
 	{
 		filter: hue-rotate(360deg);
 	}
-}
+} */
 
 section h2 {
 	color: #00ff0a;
