@@ -252,6 +252,14 @@ const MouseOut = () => {
         class="w-full h-full"
       />
     </div>
+    <div class="absolute top-[200px] left-12 ">
+      <div class=" border-white border-[2px] h-64 w-64 bg_img_go text-white  rounded-sm">
+        <div class="text-center font-bold text-2xl pt-5 tracking-wider"> 皇家私台  </div>
+        <div class="text-center font-bold text-lg pt-2 tracking-widest"> 皇家博彩新玩法,参与  </div>
+        <div class="text-center font-bold text-lg pt-2 tracking-widest"> 私台股份入股,参与,  </div>
+        <a :href="Global.go_new_private" target="_blank" class="text-center block font-bold text-lg pt-2 tracking-widest text-blue-400 cursor-pointer"> <span class="text-white">咨询</span> 点击了解》》》》  </a>
+      </div>
+    </div>
 
     <div class="m-auto md:w-[700px] xl:w-[800px] h-auto relative">
       <!-- hongbao -->
@@ -260,7 +268,8 @@ const MouseOut = () => {
      </div>
       <div class="flex absolute -right-28 justify-center items-center w-[200px]  ">
         <img src="@/assets/images/right.png" alt="left" class="w-full object-cover animate-fade-left-right ">
-     </div> -->
+     </div>  -->
+
 
       <div class="pt-16">
         <img
@@ -350,6 +359,8 @@ const MouseOut = () => {
         </div>
       </div>
     </div>
+
+
 
 
     <div class="absolute z-20 top-0 md:right-3 xl:right-20">
@@ -784,6 +795,13 @@ const MouseOut = () => {
 
 
 <style>
+
+.bg_img_go{
+  background-image: url(@/assets/images/st001.png);
+  background-repeat:  no-repeat;
+  position: relative;
+  background-size: 100% 100%;
+}
 
 /* @keyframes fadeLeftRight {
     0%, 100% {
