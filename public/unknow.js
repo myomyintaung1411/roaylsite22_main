@@ -7,7 +7,7 @@ const global = {
     new_pc_game_url:'https://pc2.hj812.vip/',
     h5_game_url:'https://h5.hj812.vip/',
     ad:"https://ht.hjbc666.com/",
-    app_down:"https://download.hjbc66.com/",
+    app_down:"https://download.hj777888.com/",
     chat_app:"http://www.cx6699.top/",
     small_game:'http://sg.royalgaming.today',
     service1:"https://kf1.hjkf77.cn/index/index/home?visiter_id=&visiter_name=&avatar=&business_id=3&groupid=5&special=34",

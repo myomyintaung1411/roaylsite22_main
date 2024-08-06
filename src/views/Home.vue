@@ -24,6 +24,7 @@ const img2 = ref("/dj3.png");
 const img3 = ref("/ht3.png");
 const img4 = ref("/xyx3.png");
 const activeTab = ref(0);
+const private_Dialog = ref(false)
 
 const notice_Dialog = ref(false) //notice dialog for old pc
 const phone_Dialog = ref(false)
@@ -89,6 +90,7 @@ width=500,height=700,left=${window.screen.width / 2},top=${window.screen.width /
 const closeGameModal = () => {
   selectGameModal.value = false;
   notice_Dialog.value = false;
+  private_Dialog.value = false;
   console.log("clllllllllllllll");
 };
 
@@ -98,6 +100,9 @@ const goDialog_Game = (number) => {
        window.open(Global.old_pc_game_url);
       //notice_Dialog.value = true
       selectGameModal.value = false;
+      break;
+    case 111:
+      private_Dialog.value = true
       break;
     case 1:
       window.open(Global.new_pc_game_url);
@@ -340,14 +345,14 @@ const MouseOut = () => {
           >
             后台登录
           </div>
-          <div
+          <!-- <div
             @click="goGamePc(3)"
             :class="pcActiveTab == 3 ? ' active_class ' : ''"
             class="rounded-3xl w-36 h-12 text-center font-bold tracking-wider __btn cursor-pointer flex justify-center items-center text-black"
             @mouseover="imageSource = 4"
           >
           休闲小游戏
-          </div>
+          </div> -->
           <!-- <div class="rounded-3xl w-44 h-12 text-center font-bold tracking-wider __btn
         cursor-pointer  flex justify-center items-center text-black" style="font-size:16px"
             @mouseover="imageSource = 4"> 后台登录（精简版）</div> -->
@@ -620,6 +625,19 @@ const MouseOut = () => {
         </div>
       </div>
     </GameModalDialog>
+
+    <ModalDialog :show="private_Dialog" @close="closeGameModal">
+      
+      <div class=" h-64 w-80 pt-5  text-white  rounded-sm">
+       <div class="">
+        <div class="text-center font-bold text-2xl pt-5 tracking-wider"> 皇家私台  </div>
+        <div class="text-center font-bold text-lg pt-2 tracking-widest"> 皇家博彩新玩法,参与  </div>
+        <div class="text-center font-bold text-lg pt-2 tracking-widest"> 私台股份入股,参与,  </div>
+        <a :href="Global.go_new_private" target="_blank" class="text-center block font-bold text-lg pt-2 tracking-widest text-blue-400 cursor-pointer"> <span class="text-white">咨询</span> 点击了解》》》》  </a>
+
+       </div>
+      </div>
+    </ModalDialog>
 <!-- 
     <GameModalDialog :show="adDialog" @closegame="adDialog=false">
       <div  
@@ -652,6 +670,11 @@ const MouseOut = () => {
         </div>
       </div> -->
       <div class="BtnUnit">
+        <div class="T1" @click="goDialog_Game(111)">
+          <a class="text-white">皇家私台</a>
+        </div>
+      </div>
+      <div class="BtnUnit">
         <div class="T1" @click="goDialog_Game(2)">
           <a class="text-white">H5 登录入口</a>
         </div>
@@ -669,9 +692,9 @@ const MouseOut = () => {
       <!-- <div @click="h5_click(2)" class="BtnUnit">
         <div class="T1"><a>诚信聊天下载</a></div>
       </div> -->
-      <div @click="h5_click(4)" class="BtnUnit">
+      <!-- <div @click="h5_click(4)" class="BtnUnit">
         <div class="T1"><a>休闲小游戏</a></div>
-      </div>
+      </div> -->
       <div @click="h5_click(3)" class="BtnUnit">
         <div class="T1"><a>客服</a></div>
       </div>
