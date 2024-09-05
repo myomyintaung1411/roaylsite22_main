@@ -264,7 +264,12 @@ const MouseOut = () => {
         <div class="text-center font-bold text-lg pt-2 tracking-widest"> 私台股份入股,参与,  </div>
         <a :href="Global.go_new_private" target="_blank" class="text-center block font-bold text-lg pt-2 tracking-widest text-blue-400 cursor-pointer"> <span class="text-white">咨询</span> 点击了解》》》》  </a>
       </div>
+       <div class="text-white pt-6 w-64 flex items-center justify-center flex-col space-y-6">
+       <a :href="Global?.currentUrl + '/browser/chrome.exe'" target="_blank"  class="text-xl border-white border-[2px] w-full flex items-center justify-center py-1 hover:text-blue-400 rounded hover:border-blue-400 transition-all text-left ">谷歌浏览器下载</a>
+       <a :href="Global?.currentUrl + '/browser/vivaldi.exe'" target="_blank"  class="text-xl border-white border-[2px] w-full flex items-center justify-center py-1 hover:text-blue-400 rounded hover:border-blue-400 transition-all text-left ">Vivaldi 浏览器下载</a>
+       </div>
     </div>
+    
 
     <div class="m-auto md:w-[700px] xl:w-[800px] h-auto relative">
       <!-- hongbao -->

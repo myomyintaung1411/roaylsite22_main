@@ -1,6 +1,7 @@
 
 // //web one
 const global = {
+    currentUrl:window.location.origin,
     go_new_private:'https://web.st885.com',
     reg:'https://hjtg.hjbc666.com/?InvCode=GO40906',
     old_pc_game_url:'https://pc1.hjbc666.com/',
